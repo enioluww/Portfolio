@@ -207,7 +207,7 @@ document.head.appendChild(style);
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const hero = document.querySelector('.hero');
-    const heroImage = document.querySelector('.profile-placeholder');
+    const heroImage = document.querySelector('.profile-image');
     
     if (hero && heroImage) {
         const rate = scrolled * -0.5;
@@ -242,3 +242,6 @@ console.log(`
 'color: #2563eb; font-size: 20px; font-weight: bold;',
 'color: #6b7280; font-size: 14px;'
 ); 
+
+// Profile image hover effect for background
+// Profile image removed - background is now the hero section background 

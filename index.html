@@ -59,9 +59,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <div class="profile-placeholder">
-                    <i class="fas fa-code"></i>
-                </div>
+                <!-- Profile image removed - background will be the picture -->
             </div>
         </div>
     </section>
@@ -71,6 +69,9 @@
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
+                <div class="about-image">
+                    <img src="assets/images/Profile-about.JPEG" alt="Enioluwa Israel Akinwande" class="about-photo">
+                </div>
                 <div class="about-text">
                     <p>
                         I'm a Computer Science graduate with specialized expertise in Cybersecurity, Cloud Computing, and Software Development, 
@@ -231,27 +232,7 @@
         </div>
     </section>
 
-                <div class="skill-category">
-                    <h3>Programming & DevOps</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fab fa-python"></i>
-                            <span>Python</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-docker"></i>
-                            <span>Docker</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-git-alt"></i>
-                            <span>Git</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-code"></i>
-                            <span>Bash Scripting</span>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
@@ -269,35 +250,35 @@
                     </div>
                     <div class="project-content">
                         <h3>Automated Vulnerability Scanner</h3>
-                        <p>Created an automated vulnerability assessment tool for cloud infrastructure. Features include container security scanning, infrastructure-as-code security analysis, and automated remediation suggestions.</p>
+                        <p>This project combines container security scanning and IaC static analysis into a single, user-friendly Python tool. It uses industry-standard open-source scanners: Trivy for scanning Docker container images and tfsec for scanning Terraform IaC code. The tool filters vulnerabilities by severity (High and Critical) and exports detailed reports with remediation suggestions and links to official security advisories.</p>
+                        <ul style="text-align:left; margin-bottom:1rem; color:#4a5568; line-height:1.7;">
+                            <li><b>Docker Image Scanner:</b> Uses Python's subprocess module to invoke Trivy as a Docker container, parses JSON output, and filters for HIGH/CRITICAL vulnerabilities with remediation guidance.</li>
+                            <li><b>Terraform IaC Scanner:</b> Runs tfsec for static analysis, filters output by severity levels, and provides resolution sections and URLs for fixing issues.</li>
+                            <li><b>Unified CLI:</b> Interactive menu allowing users to scan Docker images, Terraform code, or both sequentially with flexible severity filtering options.</li>
+                            <li><b>Report Generation:</b> Exports filtered results to text reports for auditing and provides beautiful console output using the rich library.</li>
+                        </ul>
+                        <div style="background: #f8f9fa; padding: 1rem; border-radius: 10px; margin: 1rem 0; border-left: 4px solid #007bff;">
+                            <h4 style="margin: 0 0 0.5rem 0; color: #007bff;">🛠️ Skills Acquired</h4>
+                            <p style="margin: 0; color: #495057;"><strong>Python Development:</strong> Subprocess management, JSON parsing, CLI development, error handling<br>
+                            <strong>Security Tools:</strong> Trivy container scanning, tfsec IaC analysis, vulnerability assessment<br>
+                            <strong>DevOps:</strong> Docker containerization, CI/CD integration, automated security scanning</p>
+                        </div>
+                        <div style="background: #e8f5e8; padding: 1rem; border-radius: 10px; margin: 1rem 0; border-left: 4px solid #28a745;">
+                            <h4 style="margin: 0 0 0.5rem 0; color: #28a745;">💡 Value Delivered</h4>
+                            <p style="margin: 0; color: #155724;"><strong>Security Automation:</strong> Reduces manual vulnerability assessment time from hours to minutes<br>
+                            <strong>Risk Reduction:</strong> Identifies critical security issues before deployment<br>
+                            <strong>Compliance:</strong> Provides audit trails and remediation guidance for security standards</p>
+                        </div>
                         <div class="project-tech">
                             <span>Python</span>
                             <span>Docker</span>
                             <span>Terraform</span>
-                            <span>Azure</span>
+                            <span>Trivy</span>
+                            <span>tfsec</span>
+                            <span>CLI</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/enioluww" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-server"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Secure Cloud Infrastructure (in Progress)</h3>
-                        <p>Designed and implemented a secure, scalable cloud infrastructure using Infrastructure-as-Code. Includes automated security controls, monitoring, and disaster recovery capabilities.</p>
-                        <div class="project-tech">
-                            <span>Terraform</span>
-                            <span>AWS</span>
-                            <span>Docker</span>
-                            <span>Kubernetes</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/enioluww" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://github.com/enioluww/vuln_scanner" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -308,27 +289,40 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Personal Cybersecurity Lab – Windows Server Blue Team Simulation</h3>
-                        <p>I built a personal cybersecurity lab simulating a Windows Server environment to develop hands-on skills in blue team operations and system administration. Using VirtualBox, I configured Active Directory, Group Policy, secure file sharing, DNS sinkholes, Sysmon logging, and simulated attack scenarios.</p>
+                        <h3>Personal Cybersecurity Lab</h3>
+                        <p>This is my personal cybersecurity lab where I built a simulated Windows Server environment to practice essential blue team and system administration skills. I used Windows Server and a client OS to simulate Active Directory, Group Policy, file server security, DNS sinkholes, Sysmon logging — all in VirtualBox.</p>
                         <ul style="text-align:left; margin-bottom:1rem; color:#4a5568; line-height:1.7;">
-                            <li><b>Active Directory Domain:</b> Configured Domain Controller (Windows Server) and Domain Member (Windows 10) with static IPs in a Host-Only network.</li>
-                            <li><b>Domain Joining & User Management:</b> Joined client to domain, created security groups, and managed user accounts with RBAC.</li>
-                            <li><b>File Server Security:</b> Implemented NTFS permissions for departmental shares (least privilege).</li>
-                            <li><b>Group Policy Hardening:</b> Enforced policies (Control Panel/Command Prompt restrictions, account lockout, USB blocking, login banners).</li>
-                            <li><b>Audit & Monitoring:</b> Enabled login auditing and monitored Event Viewer logs for security events.</li>
-                            <li><b>Brute Force Attack Simulation:</b> Tested account lockout policies by triggering failed logins.</li>
-                            <li><b>Sysmon Deployment:</b> Set up Sysmon with advanced logging for deep system monitoring.</li>
+                            <li><b>Lab Architecture:</b> DC01 (Domain Controller - Windows Server at 192.168.56.10) and Client01 (Domain Member - Windows 10) configured in Host-Only Network mode for secure communication.</li>
+                            <li><b>Active Directory Setup:</b> Configured domain controller, joined client to corp.local domain, created security groups (IT Admins, HR users) and implemented RBAC with user accounts.</li>
+                            <li><b>File Server Security:</b> Created shared folders (HR, Finance, Public) with NTFS permissions ensuring only authorized groups can access sensitive data.</li>
+                            <li><b>Group Policy Hardening:</b> Implemented security policies including Control Panel restrictions, Command Prompt blocking, account lockout policies, logon warning banners, and USB storage blocking.</li>
+                            <li><b>Security Monitoring:</b> Enabled login auditing, deployed Sysmon for deep system logging, and simulated brute force attacks to test account lockout policies.</li>
+                            <li><b>DNS Sinkhole:</b> Configured web filtering by editing hosts files to block known malicious domains and redirect access attempts to localhost.</li>
                         </ul>
+                        <div style="background: #f8f9fa; padding: 1rem; border-radius: 10px; margin: 1rem 0; border-left: 4px solid #007bff;">
+                            <h4 style="margin: 0 0 0.5rem 0; color: #007bff;">🛠️ Skills Acquired</h4>
+                            <p style="margin: 0; color: #495057;"><strong>Windows Administration:</strong> Active Directory, Group Policy, NTFS permissions, DNS management<br>
+                            <strong>Security Hardening:</strong> Account policies, firewall configuration, audit logging, Sysmon deployment<br>
+                            <strong>Virtualization:</strong> VirtualBox networking, VM configuration, isolated lab environments</p>
+                        </div>
+                        <div style="background: #e8f5e8; padding: 1rem; border-radius: 10px; margin: 1rem 0; border-left: 4px solid #28a745;">
+                            <h4 style="margin: 0 0 0.5rem 0; color: #28a745;">💡 Value Delivered</h4>
+                            <p style="margin: 0; color: #155724;"><strong>Hands-on Experience:</strong> Practical skills in enterprise Windows environments<br>
+                            <strong>Security Best Practices:</strong> Understanding of defense-in-depth and security controls<br>
+                            <strong>Incident Response:</strong> Experience with log analysis and attack simulation</p>
+                        </div>
                         <div class="project-tech">
                             <span>VirtualBox</span>
                             <span>Windows Server</span>
-                            <span>Windows 11</span>
-                            <span>Sysmon</span>
+                            <span>Windows 10</span>
                             <span>Active Directory</span>
                             <span>Group Policy</span>
+                            <span>Sysmon</span>
+                            <span>NTFS Permissions</span>
+                            <span>DNS Filtering</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/enioluww/activedirectory-Cyberlab.git" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://github.com/enioluww/activedirectory-Cyberlab" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -339,21 +333,81 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Volunteer Connect </h3>
-                        <p><b>Volunteer Connect</b> is a full-stack web platform designed to bridge the gap between university organizations seeking volunteers and students eager to contribute their time and skills to worthy causes. The platform streamlines the process of posting, discovering, and applying for volunteer opportunities, making campus engagement more accessible and impactful for all participants.</p>
+                        <h3>Volunteer Connect</h3>
+                        <p>Volunteer Connect is a comprehensive platform designed to bridge the gap between university organizations seeking volunteers and students eager to contribute their time and skills to worthy causes.</p>
                         <ul style="text-align:left; margin-bottom:1rem; color:#4a5568; line-height:1.7;">
-                            <li><b>How it works:</b> Organizations can create accounts, post volunteer opportunities, and manage applications. Students can browse listings, apply for roles, and track their volunteer hours and experiences.</li>
-                            <li><b>Technical Implementation:</b> Builtsing <b>React</b> for the frontend, <b>Node.js</b> and <b>Express</b> for the backend API, <b>MongoDB</b> for data storage, and <b>Docker</b> for containerized deployment and development consistency.</li>
-                            <li><b>Value:</b> Volunteer Connect fosters a culture of service and skill-building on campus, helping students find meaningful opportunities and enabling organizations to efficiently recruit and manage volunteers. The platform’s intuitive interface and robust backend make it scalable and easy to maintain.</li>
+                            <li><b>Platform Purpose:</b> Streamlines the process of posting, discovering, and applying for volunteer opportunities, making campus engagement more accessible and impactful for all participants.</li>
+                            <li><b>Installation Setup:</b> Requires Node.js and MongoDB credentials. Users must duplicate server/SECRET.env.template to server/SECRET.env and fill out MongoDB credentials and secret keys for authentication cookies.</li>
+                            <li><b>Docker Deployment:</b> Includes Dockerfiles and docker-compose.yml for containerized deployment. Build with 'docker compose build' and run with 'docker compose up -d' for easy setup and management.</li>
+                            <li><b>Service Architecture:</b> Client runs on http://localhost:4173 and server on http://localhost:8000, providing a clear separation between frontend and backend services.</li>
                         </ul>
+                        <div style="background: #f8f9fa; padding: 1rem; border-radius: 10px; margin: 1rem 0; border-left: 4px solid #007bff;">
+                            <h4 style="margin: 0 0 0.5rem 0; color: #007bff;">🛠️ Skills Acquired</h4>
+                            <p style="margin: 0; color: #495057;"><strong>Full-Stack Development:</strong> React frontend, Node.js backend, MongoDB database design<br>
+                            <strong>DevOps & Deployment:</strong> Docker containerization, docker-compose orchestration, environment management<br>
+                            <strong>Security:</strong> Environment variable management, authentication cookies, secure credential handling</p>
+                        </div>
+                        <div style="background: #e8f5e8; padding: 1rem; border-radius: 10px; margin: 1rem 0; border-left: 4px solid #28a745;">
+                            <h4 style="margin: 0 0 0.5rem 0; color: #28a745;">💡 Value Delivered</h4>
+                            <p style="margin: 0; color: #155724;"><strong>Community Impact:</strong> Connects students with meaningful volunteer opportunities<br>
+                            <strong>Operational Efficiency:</strong> Streamlines volunteer recruitment and management processes<br>
+                            <strong>Scalable Solution:</strong> Containerized architecture enables easy deployment and scaling</p>
+                        </div>
                         <div class="project-tech">
                             <span>React</span>
                             <span>Node.js</span>
                             <span>MongoDB</span>
                             <span>Docker</span>
+                            <span>Express</span>
+                            <span>Environment Variables</span>
                         </div>
                         <div class="project-links">
                             <a href="https://github.com/enioluww/volunteerconnect" class="project-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-shield-virus"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Azure Honeypot with Sentinel Integration</h3>
+                        <p>My hands-on journey into cloud security where I built a Windows 10 VM honeypot on Microsoft Azure to understand real-world attack patterns. This project taught me how to deploy cloud infrastructure, configure enterprise SIEM tools, and analyze security logs to detect and investigate threats in real-time.</p>
+                        <ul style="text-align:left; margin-bottom:1rem; color:#4a5568; line-height:1.7;">
+                            <li><b>VM Provisioning & Network Security:</b> Deployed Windows 10 VM in Azure portal, configured Network Security Groups to allow all inbound traffic, and disabled Windows Firewall to expose the honeypot and attract attack traffic.</li>
+                            <li><b>Attack Simulation & Log Collection:</b> Simulated brute-force login attempts by intentionally failing logins, then captured Event ID 4625 (failed logon) events in Windows Event Viewer to understand real-time security monitoring.</li>
+                            <li><b>Sentinel Integration:</b> Created Log Analytics Workspace, deployed Microsoft Sentinel, and configured "Windows Security Events via AMA" data connector to automatically forward security logs from the VM to the SIEM platform.</li>
+                            <li><b>Geolocation Enrichment:</b> Imported 54,000+ row IP geolocation database as a Sentinel Watchlist, wrote KQL queries using ipv4_lookup to enrich logs with geographic context for threat intelligence.</li>
+                            <li><b>Attack Visualization:</b> Built custom Sentinel Workbooks with advanced JSON configuration to create interactive world maps showing attack origins, enabling visual analysis of threat patterns and attack hotspots.</li>
+                        </ul>
+                        <div style="background: #f8f9fa; padding: 1rem; border-radius: 10px; margin: 1rem 0; border-left: 4px solid #007bff;">
+                            <h4 style="margin: 0 0 0.5rem 0; color: #007bff;">🛠️ Skills Acquired</h4>
+                            <p style="margin: 0; color: #495057;"><strong>Cloud Security:</strong> Azure VM deployment, Network Security Groups, cloud infrastructure management<br>
+                            <strong>SIEM Operations:</strong> Microsoft Sentinel, Log Analytics, KQL query writing, data connectors<br>
+                            <strong>Threat Intelligence:</strong> Geolocation data enrichment, attack pattern analysis, security visualization</p>
+                        </div>
+                        <div style="background: #e8f5e8; padding: 1rem; border-radius: 10px; margin: 1rem 0; border-left: 4px solid #28a745;">
+                            <h4 style="margin: 0 0 0.5rem 0; color: #28a745;">💡 Value Delivered</h4>
+                            <p style="margin: 0; color: #155724;"><strong>Real-world Experience:</strong> Hands-on cloud security and enterprise SIEM operations<br>
+                            <strong>Threat Detection:</strong> Understanding of attack patterns and security incident response<br>
+                            <strong>Professional Growth:</strong> Practical skills in modern cybersecurity tools and cloud platforms</p>
+                        </div>
+                        <div class="project-tech">
+                            <span>Microsoft Azure</span>
+                            <span>Windows VM</span>
+                            <span>Microsoft Sentinel</span>
+                            <span>KQL</span>
+                            <span>Log Analytics</span>
+                            <span>Network Security Groups</span>
+                            <span>SIEM</span>
+                            <span>Geolocation Data</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/enioluww/AZ-honey-pot-attack-map" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
                         </div>
                     </div>
                 </div>
